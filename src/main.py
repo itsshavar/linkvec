@@ -12,10 +12,10 @@ def parse_args():
     '''
     parser = argparse.ArgumentParser(description="Run link2vec.")
 
-    parser.add_argument('--input', nargs='?', default='graph/karate.edgelist',
+    parser.add_argument('--input', nargs='?', default='graph/random.edgelist',
                         help='Input graph path')
 
-    parser.add_argument('--output', nargs='?', default='emb/karate.emb',
+    parser.add_argument('--output', nargs='?', default='emb/random.emb',
                         help='Embeddings path')
 
     parser.add_argument('--dimensions', type=int, default=10,
