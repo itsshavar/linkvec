@@ -1,16 +1,16 @@
-# link2vec
+# linkvec
 
-This repository provides a reference implementation of *link2vec* 
+This repository provides a reference implementation of *linkvec* 
 
 
 ### Basic Usage
 
 #### Example
-To run *link2vec* on random network, execute the following command from the project home directory:<br/>
+To run *linkvec* on random network, execute the following command from the project home directory:<br/>
 	``python src/main.py --input graph/random.edgelist --output emb/random.emb``
 
 #### Options
-You can check out the other options available to use with *link2vec* using:<br/>
+You can check out the other options available to use with *linkvec* using:<br/>
 	``python src/main.py --help``
 
 #### Input
