@@ -8,9 +8,9 @@ from gensim.models import Word2Vec
 
 def parse_args():
     '''
-    Parses the link2vec arguments.
+    Parses the linkvec arguments.
     '''
-    parser = argparse.ArgumentParser(description="Run link2vec.")
+    parser = argparse.ArgumentParser(description="Run linkvec.")
 
     parser.add_argument('--input', nargs='?', default='graph/random.edgelist',
                         help='Input graph path')
