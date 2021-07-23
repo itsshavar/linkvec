@@ -64,7 +64,7 @@ def parse_args():
     return parser.parse_args()
 
 
-def read_graph():
+def read_graph(args):
     '''
     Reads the input network in networkx.
     '''
@@ -114,7 +114,7 @@ def main(args):
     '''
     Pipeline for representational learning for all nodes in a graph.
     '''
-    nx_G = read_graph()
+    nx_G = read_graph(args)
     G = linkvectorizer.LinkVectorizer(nx_G, args.directed, args.p, args.q)
     G.preprocess_modified_weights()
     walks = G.generate_random_walks_with_bias(args.num_walks, args.walk_length)
