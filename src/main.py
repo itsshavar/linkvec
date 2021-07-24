@@ -2,7 +2,7 @@ import argparse
 import numpy as np
 import networkx as nx
 import linkvectorizer
-import alogrithm
+import algorithm
 from gensim.models import Word2Vec
 
 
@@ -19,7 +19,7 @@ def parse_args():
                         help='Embeddings path')
 
     parser.add_argument('--dimensions', type=int, default=10,
-                        help='Number of dimensions. Default is 10.')
+                        help='Number of dimensions. Default is 128.')
 
     parser.add_argument('--walk-length', type=int, default=3,
                         help='Length of walk per source. Default is 80.')
@@ -92,19 +92,19 @@ def str_list(walk):
     return temp
 
 
-def learn_embeddings(walks,dimension, window_size,workers,iter):
+def learn_embeddings(walks):
     '''
     Learn embeddings by optimizing the Skipgram objective using SGD.
     '''
     walks = [str_list(walk) for walk in walks]
     model = Word2Vec(
         walks,
-        size=dimension,
-        window=window_size,
+        size=args.dimensions,
+        window=args.window_size,
         min_count=0,
         sg=1,
-        workers=workers,
-        iter=iter)
+        workers=args.workers,
+        iter=args.iter)
     model.wv.save_word2vec_format(args.output)
 
     return model.wv
@@ -123,7 +123,7 @@ def main(args):
     nodes = list(nx_G.nodes)
     src = nodes[0]
     dest = nodes[1]
-    vec = alogrithm.linkvec(embeddings,src,dest, strategy='max')
+    vec = algorithm.linkvec(embeddings,src,dest, strategy='max')
     print('Generated Vector is = >', vec)
 
 
