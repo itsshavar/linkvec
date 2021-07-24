@@ -1,7 +1,7 @@
 import numpy as np
 import networkx as nx
 import random
-from alogrithm import get_bias, alias_draw
+from algorithm import get_bias, alias_draw
 
 
 class LinkVectorizer():
@@ -88,7 +88,7 @@ class LinkVectorizer():
 
         alias_nodes = {}
         for node in G.nodes():
-            unnormalized_probs = [G[node][nbr]['weight']
+            unnormalized_probs = [ 1 
                                   for nbr in sorted(G.neighbors(node))]
             norm_const = sum(unnormalized_probs)
             normalized_probs = [
