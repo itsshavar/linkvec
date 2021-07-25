@@ -44,7 +44,7 @@ the final edge embedding would be
 
 To predict links one can use ```src/linkprediction.py``` 
 
-The given implementation is for only computing the accuracy. Rest of the metrics can be computed in the accordingly.
+The given implementation is for computing the accuracy. Rest of the metrics can be computed accordingly.
 
 
 
