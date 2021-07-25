@@ -17,11 +17,11 @@ from time import time
 import linkvectorizer
 from algorithm import linkvec,learn_embeddings
 
-with open("data/fb-food-pages/fb-pages-food.nodes") as f:
+with open(<datafile>) as f:
     fb_nodes = f.read().splitlines() 
 
 # load edges (or links)
-with open("data/fb-food-pages/fb-pages-food.edges") as f:
+with open(<datafile>) as f:
     fb_links = f.read().splitlines() 
 
 print("Node and Edge Length : ",len(fb_nodes), len(fb_links))
