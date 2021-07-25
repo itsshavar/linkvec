@@ -6,7 +6,7 @@ This repository contains following files:
  2. `./graph/fb-food-pages.edgelist` : Contains the edgelist for facebook food page [dataset](http://networkrepository.com/fb-pages-food.php)
  3. `./src/main.py` : Contains driver program for embedding generation
  4. `./src/linkprediciton.py` : Contains driver program for link predicition problem
- 5. `./src/algoirthm.py` : Contains methods for edge embedding.
+ 5. `./src/algorithm.py` : Contains methods for edge embedding.
  6. `./src/linkvectorizer.py` : Contains implementation of link vectorizer object.
 
 ## Embedding Generation
