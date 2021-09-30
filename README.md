@@ -46,5 +46,15 @@ To predict links one can use ```src/linkprediction.py```
 
 The given implementation is for computing the accuracy. Rest of the metrics can be computed accordingly.
 
+Citation :
 
-
+@article{TRIPATHI2021,
+title = {Network embedding based link prediction in dynamic networks},
+journal = {Future Generation Computer Systems},
+year = {2021},
+issn = {0167-739X},
+doi = {https://doi.org/10.1016/j.future.2021.09.024},
+url = {https://www.sciencedirect.com/science/article/pii/S0167739X21003708},
+author = {Shashi Prakash Tripathi and Rahul Kumar Yadav and Abhay Kumar Rai},
+keywords = {Network embedding, Link prediction, Similarity measures, Network features, Feature learning, Biased random walk, Dynamic networks},
+}
